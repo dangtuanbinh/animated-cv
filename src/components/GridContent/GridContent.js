@@ -5,6 +5,8 @@ import { FiLinkedin } from "react-icons/fi";
 import { VscGithub } from "react-icons/vsc";
 import { IoMailUnreadOutline } from "react-icons/io5";
 import { BsSend } from "react-icons/bs";
+import { MdOutlineCloudDownload } from "react-icons/md";
+import { HiMiniViewfinderCircle } from "react-icons/hi2";
 import Image from 'next/image';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
@@ -105,10 +107,22 @@ const App = () => {
               </div>
             )}
             {item.i === 'resume' && (
-              <>
-                <h3>Resume</h3>
-                <button className={styles.resumeButton}>Download</button>
-              </>
+              <div className={styles.resume}>
+                <div className={styles.title}>
+                    <span>2024 CV</span>
+                    <h3>Resume</h3>
+                </div>
+
+                <div className={styles.cvButton}>
+                    <a href='#'>
+                        <MdOutlineCloudDownload />
+                    </a>
+
+                    <a href='#'>
+                        <HiMiniViewfinderCircle />
+                    </a>
+                </div>
+              </div>
             )}
             {item.i === 'themeToggle' && (
               <button className={styles.themeToggleButton}>🌙</button>
