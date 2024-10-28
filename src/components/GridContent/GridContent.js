@@ -15,76 +15,84 @@ const App = () => {
   // Define multiple layouts
   const layouts = {
     layout1: [
-      { i: 'profile', x: 0, y: 0, w: 4, h: 4 },
-      { i: 'resume', x: 6, y: 0, w: 2, h: 2 },
-      { i: 'map', x: 4, y: 0, w: 2, h: 4 },
-      { i: 'themeToggle', x: 6, y: 2, w: 2, h: 2 },
+      { i: 'profile', x: 0, y: 0, w: 3, h: 4 },
+      { i: 'resume', x: 5, y: 0, w: 1, h: 2 },
+      { i: 'map', x: 3, y: 0, w: 2, h: 4 },
+      { i: 'themeToggle', x: 5, y: 1, w: 1, h: 2 },
       { i: 'linkedIn', x: 0, y: 2, w: 1, h: 2 },
-      { i: 'git', x: 0, y: 2, w: 1, h: 2 },
-      { i: 'tech', x: 1, y: 4, w: 3, h: 6 },
+      { i: 'git', x: 0, y: 1, w: 1, h: 2 },
+      { i: 'tech', x: 1, y: 4, w: 2, h: 6 },
       { i: 'mail', x: 0, y: 4, w: 1, h: 2 },
-      { i: 'experience', x: 4, y: 3, w: 4, h: 7 },
-      { i: 'project1', x: 0, y: 6, w: 4, h: 9 },
-      { i: 'project2', x: 4, y: 6, w: 4, h: 9 },
-      { i: 'project3', x: 0, y: 6, w: 4, h: 9 },
-      { i: 'project4', x: 4, y: 6, w: 4, h: 9 },
+      { i: 'experience', x: 4, y: 3, w: 3, h: 7 },
+      { i: 'project1', x: 0, y: 6, w: 3, h: 9 },
+      { i: 'project2', x: 4, y: 6, w: 3, h: 9 },
+      { i: 'project3', x: 0, y: 6, w: 3, h: 9 },
+      { i: 'project4', x: 4, y: 6, w: 3, h: 9 },
     ],
     layout2: [
-      { i: 'profile', x: 0, y: 0, w: 4, h: 4 },
-      { i: 'tech', x: 5, y: 0, w: 3, h: 4 },
+      { i: 'profile', x: 0, y: 0, w: 3, h: 4 },
+      { i: 'tech', x: 5, y: 0, w: 3, h: 6 },
       { i: 'resume', x: 0, y: 3, w: 3, h: 2 },
-      { i: 'map', x: 0, y: 4, w: 4, h: 3 },
-      { i: 'themeToggle', x: 3, y: 4, w: 1, h: 1 },
-      { i: 'linkedIn', x: 4, y: 0, w: 1, h: 2 },
+      { i: 'map', x: 0, y: 4, w: 3, h: 3 },
+      { i: 'themeToggle', x: 3, y: 2, w: 1, h: 1 },
+      { i: 'linkedIn', x: 6, y: 0, w: 1, h: 2 },
       { i: 'git', x: 4, y: 0, w: 1, h: 2 },
       { i: 'mail', x: 3, y: 3, w: 1, h: 1 },
-      { i: 'experience', x: 4, y: 3, w: 4, h: 7 },
-      { i: 'project1', x: 0, y: 11, w: 4, h: 9 },
-      { i: 'project2', x: 4, y: 11, w: 4, h: 9 },
-      { i: 'project3', x: 0, y: 15, w: 4, h: 9 },
-      { i: 'project4', x: 4, y: 15, w: 4, h: 9 },
+      { i: 'experience', x: 4, y: 3, w: 3, h: 7 },
+      { i: 'project1', x: 0, y: 11, w: 3, h: 9 },
+      { i: 'project2', x: 4, y: 11, w: 3, h: 9 },
+      { i: 'project3', x: 0, y: 15, w: 3, h: 9 },
+      { i: 'project4', x: 4, y: 15, w: 3, h: 9 },
     ],
     layout3: [
-        { i: 'profile', x: 0, y: 10, w: 3, h: 6 },
-        { i: 'resume', x: 5, y: 0, w: 4, h: 2 },
-        { i: 'map', x: 6, y: 4, w: 4, h: 5 },
-        { i: 'themeToggle', x: 5, y: 0, w: 4, h: 2 },
-        { i: 'linkedIn', x: 3, y: 4, w: 1, h: 2 },
-        { i: 'git', x: 3, y: 4, w: 1, h: 2 },
-        { i: 'tech', x: 4, y: 3, w: 4, h: 4 },
-        { i: 'mail', x: 3, y:4, w: 1, h: 2 },
-        { i: 'experience', x: 0, y: 2, w: 4, h: 7 },
-        { i: 'project1', x: 0, y: 0, w: 4, h: 9 },
-        { i: 'project2', x: 0, y: 1, w: 4, h: 9 },
-        { i: 'project3', x: 5, y: 1, w: 4, h: 9 },
-        { i: 'project4', x: 5, y: 2, w: 4, h: 9 },
+        { i: 'profile', x: 0, y: 10, w: 3, h: 4 },
+        { i: 'resume', x: 5, y: 0, w: 3, h: 2 },
+        { i: 'map', x: 6, y: 4, w: 3, h: 5 },
+        { i: 'themeToggle', x: 5, y: 0, w: 3, h: 2 },
+        { i: 'linkedIn', x: 2, y: 5, w: 1, h: 2 },
+        { i: 'git', x: 0, y: 5, w: 1, h: 2 },
+        { i: 'tech', x: 4, y: 3, w: 3, h: 6 },
+        { i: 'mail', x: 1, y:5, w: 1, h: 2 },
+        { i: 'experience', x: 0, y: 3, w: 3, h: 7 },
+        { i: 'project1', x: 0, y: 0, w: 3, h: 9 },
+        { i: 'project2', x: 0, y: 1, w: 3, h: 9 },
+        { i: 'project3', x: 5, y: 1, w: 3, h: 9 },
+        { i: 'project4', x: 5, y: 2, w: 3, h: 9 },
       ],
   };
 
   // Set initial layout state
+  const [currentTheme, setCurrentTheme] = useState('light');
   const [currentLayout, setCurrentLayout] = useState(layouts.layout1);
+  const [currentLayoutName, setCurrentLayoutName] = useState('layout1');
+
+  const toggleTheme = () => {
+    setCurrentTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
+  };
 
   // Handler for layout change buttons
-  const changeLayout = (layout) => {
+  const changeLayout = (layout, layoutName) => {
     setCurrentLayout(layout);
+    setCurrentLayoutName(layoutName);
   };
 
   return (
-    <div className={styles.App}>
+    <div  className={`${styles.App} ${styles[currentTheme]}`}>
       <div className={styles.buttonWrapper}>
-        <button className={`${currentLayout === 'layout1' ? styles.active : ''}`} onClick={() => changeLayout(layouts.layout1)}>All</button>
-        <button className={`${currentLayout === 'layout2' ? styles.active : ''}`} onClick={() => changeLayout(layouts.layout2)}>Introduction</button>
-        <button className={`${currentLayout === 'layout3' ? styles.active : ''}`} onClick={() => changeLayout(layouts.layout3)}>Projects</button>
+        <button className={`${currentLayoutName  === 'layout1' ? styles.active : styles.noBacKground}`} onClick={() => changeLayout(layouts.layout1, 'layout1')}>All</button>
+        <button className={`${currentLayoutName  === 'layout2' ? styles.active : styles.noBacKground}`} onClick={() => changeLayout(layouts.layout2, 'layout2')}>Introduction</button>
+        <button className={`${currentLayoutName  === 'layout3' ? styles.active : styles.noBacKground}`} onClick={() => changeLayout(layouts.layout3, 'layout3')}>Projects</button>
       </div>
 
       <ResponsiveGridLayout
         className={styles.layout}
         layout={currentLayout}
-        breakpoints={{ lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0 }}
-        cols={{ lg: 8, md: 6, sm: 4, xs: 2, xxs: 1 }}
+        breakpoints={{ lg: 1440, md: 996, sm: 768, xs: 480, xxs: 0 }}
+        cols={{ lg: 10, md: 6, sm: 4, xs: 2, xxs: 1 }}
         rowHeight={60}
         width={1200}
         draggableHandle=".drag-handle"
+        isResizable={false}
         isDraggable={true}
         responsive={true}
       >
@@ -114,18 +122,20 @@ const App = () => {
                 </div>
 
                 <div className={styles.cvButton}>
-                    <a href='#'>
+                    <a href="/myCV.pdf" download="myCV.pdf">
                         <MdOutlineCloudDownload />
                     </a>
 
-                    <a href='#'>
+                    <a href="/myCV.pdf" target="_blank" rel="noopener noreferrer">
                         <HiMiniViewfinderCircle />
                     </a>
                 </div>
               </div>
             )}
             {item.i === 'themeToggle' && (
-              <button className={styles.themeToggleButton}>🌙</button>
+               <button onClick={toggleTheme} className={styles.themeToggleButton}>
+               {currentTheme === 'light' ? '🌙 Dark Mode' : '☀️ Light Mode'}
+             </button>
             )}
             {item.i === 'map' && (
               <div className={styles.map}>
@@ -133,16 +143,23 @@ const App = () => {
               </div>
             )}
             {item.i === 'linkedIn' && (
-              <a href='https://www.linkedin.com/in/tuan-binh-dang-54298910b/' className={styles.socialButton}><FiLinkedin /></a>
+              <a href='https://www.linkedin.com/in/tuan-binh-dang-54298910b/' className={styles.socialButton} target='_blank'><FiLinkedin /></a>
             )}
             {item.i === 'git' && (
-              <a href='https://github.com/dangtuanbinh' className={styles.socialButton}><VscGithub /></a>
+              <a href='https://github.com/dangtuanbinh' className={styles.socialButton} target='_blank'><VscGithub /></a>
             )}
             {item.i === 'mail' && (
               <a className={styles.socialButton}><IoMailUnreadOutline /></a>
             )}
             {item.i === 'tech' && (
-              <button className={styles.themeToggleButton}>Tech</button>
+              <div className={styles.techContainer}>
+                <h3>My tech stack</h3>
+                <div className={styles.techSlider}></div>
+                <div className={styles.techFooter}>
+                  <p>Currently using: </p>
+                  <span>Tech I ❤️</span>
+                </div>
+              </div>
             )}
             {item.i === 'experience' && (
               <div className={styles.workContainer}>
@@ -194,6 +211,7 @@ const App = () => {
                     <p>Frontend</p>
                     <p>Javascript</p>
                     <p>Typescript</p>
+                    <p>ReactJS</p>
                     <p>SCSS</p>
                     <p>Figma</p>
                     <p>SSR</p>
@@ -226,9 +244,8 @@ const App = () => {
                     <BsSend />
                 </a>   
                 <div className={styles.techList}>
-                        <p>Solo Developer</p>
+                    <p>Solo Developer</p>
                     <p>Frontend</p>
-                    <p>Javascript</p>
                     <p>Typescript</p>
                     <p>SCSS</p>
                     <p>Figma</p>

@@ -9,9 +9,17 @@
     box-sizing: border-box; 
   }
 
+  .App.light {
+    color: #000000;
+  }
+  
+  .App.dark {
+    color: #ffffff;
+  }
+
   .layout {
     width: 100%;
-    padding: 0 5rem;
+    padding: 0 3rem;
   }
 
   .buttonWrapper{
@@ -37,9 +45,12 @@
 
     box-shadow: none;
     border: none;
+   
+    transition: all 0.7s ease-in-out;
+  }
 
-    background: none;
-    transition: opacity .3s ease 0s;
+  .noBacKground{
+    background: unset;
   }
 
   .active{
@@ -56,10 +67,6 @@
     min-width: 150px;
     transition: all ease-in-out 0.8s !important;
     
-  }
-  
-  .card h2, .card h3, .card p {
-    margin: 0.5rem 0;
   }
   
   .profile {
@@ -100,14 +107,25 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 32px;
+    padding: 10px;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  .resume span{
+    font-size: 13px;
+  }
+
+  .resume h3{
+    font-size: 20px;
   }
 
   .cvButton a svg{
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 
-    margin-left: 20px;
+    margin-left: 15px;
 
     cursor: pointer;
 
@@ -188,6 +206,33 @@
     justify-content: center;
     background-color: #333;
     color: #999;
+  }
+
+  .techContainer{
+    padding: 32px;
+  }
+
+  .techContainer h3{
+    font-size: 15px;
+    font-weight: 500;
+    color: #65656a;
+  }
+
+  .techSlider{
+    min-height: 200px;
+  }
+
+  .techFooter p{
+    font-size: 15px;
+    font-weight: 500;
+    color: #65656a;
+    margin-bottom: 20px;
+  }
+
+  .techFooter span{
+    
+    font-size: 30px;
+    font-weight: 500;
   }
 
   .workContainer{
@@ -318,11 +363,16 @@
     display: flex;
     align-items: center;
 
-    margin: 15px 0;
+    margin: 20px 0;
   }
 
   .projectDescription{
     opacity: 0.8;
+  }
+
+  .projectDescription p{
+    font-size: 25px;
+    font-weight: bold;
   }
 
   .projectDescription svg{
@@ -340,7 +390,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
 
   .techList p{
@@ -360,6 +410,19 @@
   @media (max-width: 768px) {
     .layout {
       padding: 0;
+    }
+
+    .projectDescription p{
+      font-size: 20px;
+    }
+
+    .workItemContainer h2{
+      font-size: 25px;
+    }
+
+    .profileTitle h2{
+      font-size: 33px;
+      margin-left: 19px;
     }
   }
   
