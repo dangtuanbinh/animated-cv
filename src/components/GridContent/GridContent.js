@@ -16,8 +16,8 @@ const App = () => {
   const layouts = {
     layout1: [
       { i: 'profile', x: 0, y: 0, w: 4, h: 4 },
-      { i: 'resume', x: 4, y: 0, w: 4, h: 2 },
-      { i: 'map', x: 4, y: 2, w: 2, h: 2 },
+      { i: 'resume', x: 6, y: 0, w: 2, h: 2 },
+      { i: 'map', x: 4, y: 0, w: 2, h: 4 },
       { i: 'themeToggle', x: 6, y: 2, w: 2, h: 2 },
       { i: 'linkedIn', x: 0, y: 2, w: 1, h: 2 },
       { i: 'git', x: 0, y: 2, w: 1, h: 2 },
