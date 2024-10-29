@@ -134,7 +134,7 @@ const App = ({currentTheme, toggleTheme}) => {
                     />
                 </div>
                 
-                <p>Passionate about crafting stunning and intuitive web experiences, I transform design concepts into dynamic, responsive interfaces. Let's build something amazing together!</p>
+                <p>Passionate about crafting stunning and intuitive web experiences, I transform design concepts into dynamic, responsive interfaces. Let build something amazing together!</p>
               </div>
             )}
             {item.i === 'resume' && (
