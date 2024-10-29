@@ -32,8 +32,16 @@
     margin: 80px 0;
     padding: 6px;
 
-    border: 1px solid #ffffff;
+    border: 1px solid #e5e7eb;
     border-radius: 1.5rem;
+  }
+
+  .buttonWrapper.light{
+    background-color: #fafafa;
+  }
+
+  .buttonWrapper.dark{
+    background-color: unset;
   }
 
   .buttonWrapper button{
@@ -46,7 +54,15 @@
     box-shadow: none;
     border: none;
    
-    transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;  
+  }
+
+  .buttonWrapper button.light{
+    color: #000000;
+  }
+
+  .buttonWrapper button.dark{
+    color: #e4e8ee
   }
 
   .noBacKground{
@@ -57,16 +73,49 @@
     background: #21262d;
   }
 
+  .active.light{
+    background-color: #e4e8ee;
+  }
+
+  .active.dark{
+    background-color: #21262d;
+  }
+
   .card {
-    background-color: rgba(26, 26, 26, 0.8); 
+    opacity: 0.8;
     backdrop-filter: blur(10px);
     border-radius: 12px;
     border-color: #fff;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     color: #fff;
     min-width: 150px;
-    transition: all ease-in-out 0.8s !important;
-    
+    transition: all ease-in-out 0.5s !important;
+    cursor: grab;
+  }
+
+  .card.light{
+    background-color: #fafafa;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.35);
+  }
+
+  .card.dark{
+    background-color: #161b1d; 
+    box-shadow: 0px 0px 4px 0px rgba(255, 255, 255, 0.35);
+  }
+
+  .App.react-grid-layout.react-grid-item.react-grid-placeholder { 
+    background: blue !important; 
+  }
+
+  .socialItem{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    cursor: grab;
   }
   
   .profile {
@@ -80,9 +129,17 @@
   .profileContainer p{
     margin-top: 30px;
     font-size: 16px;
-    color: #e0e0e1;
+    
     line-height: 25px;
     font-weight: 300;
+  }
+
+  .profileContainer.light p{
+    color: #0e1628;
+  }
+
+  .profileContainer.dark p{
+    color: #e0e0e1;
   }
 
   .profileTitle{
@@ -96,10 +153,18 @@
     border-radius: 999px;
   }
 
-  .profileTitle h2{
+  .profileTitle span{
     font-size: 40px;
     font-weight: 300;
     margin-left: 40px;
+  }
+
+  .profileTitle.light span{
+    color: #0e1628;
+  }
+
+  .profileTitle.dark p{
+    color: #e0e0e1;
   }
 
   .resume{
@@ -117,9 +182,26 @@
     font-size: 13px;
   }
 
+  .resume.light span{
+    color: #65656a
+  }
+
+  .resume.dark span{
+    color: #65656a
+  }
+
   .resume h3{
     font-size: 20px;
   }
+
+  .resume.light h3{
+    color: #65656a
+  }
+
+  .resume.dark h3{
+    color: #ffffff
+  }
+
 
   .cvButton a svg{
     width: 30px;
@@ -130,6 +212,14 @@
     cursor: pointer;
 
     opacity: 0.8;
+  }
+
+  .cvButton.light a svg path{
+    color: #65656a;
+  }
+
+  .cvButton.dark a svg path{
+    color: #ffffff;
   }
 
   .map{
@@ -152,11 +242,21 @@
     left: 0;
     z-index: 1;
 
+    border-radius: 10px;
+
     width: 100%;
     height: 100%;
 
-    background: black;
+    background: #000000;
     opacity: 0.3;
+  }
+
+  .mapLayer.light{
+    display: none;
+  }
+
+  .mapLayer.dark{
+    display: block;
   }
 
   .socialButton{
@@ -165,8 +265,8 @@
     justify-content: center;
     align-items: center;
 
-    width: 100%;
-    height: 100%;
+    width: 50px;
+    height: 50px;
 
     cursor: pointer;
 
@@ -176,6 +276,14 @@
   .socialButton svg{
     width: 50px;
     height: 50px;
+  }
+
+  .socialButton.light svg path{
+    color: #65656a;
+  }
+
+  .socialButton.dark svg path{
+    color: #ffffff;
   }
   
   .resume button, .social button {
@@ -191,13 +299,51 @@
   .resume button:hover, .social button:hover {
     background-color: #0056b3;
   }
+
+  .themeToggle{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 0 10px;
+  }
   
   .themeToggle button {
-    font-size: 1.5rem;
-    background: none;
+    font-size: 2rem;
     border: none;
     color: #fff;
     cursor: pointer;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    width:90px;
+    height: 50px;
+
+    transition: all 0.8s ease-in-out;
+  }
+
+  .themeActive{
+    background-color: #373737;
+  }
+
+  .themeActive.light {
+    background-color: unset;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.35);
+  }
+
+  .themeActive.dark{
+    background-color: #373737;
+  }
+
+  .themeNoBackground{
+    background-color: unset;
   }
   
   .map {
@@ -219,7 +365,33 @@
   }
 
   .techSlider{
-    min-height: 200px;
+    /* min-height: 200px; */
+    margin: 70px 0;
+  }
+
+  .techSlider.slick-slider{
+    max-width: 500px !important;
+  }
+
+  .techSliderItem{
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .techSliderItem img{
+    padding: 15px;
+
+    border-radius: 15px;
+  }
+
+  .techSliderItem.light img{
+    background-color: #dbdbdb;
+  }
+
+  .techSliderItem.dark img{
+    background-color: #252526;
   }
 
   .techFooter p{
@@ -230,9 +402,16 @@
   }
 
   .techFooter span{
-    
     font-size: 30px;
     font-weight: 500;
+  }
+
+  .techFooter.light span{
+    color: #0e1628;
+  }
+
+  .techFooter.dark span{
+    color: #ffffff;
   }
 
   .workContainer{
@@ -243,6 +422,14 @@
     font-size: 30px;
     font-weight: 300;
     margin-bottom: 40px;
+  }
+
+  .workContainer.light h4{
+    color: #65656a;
+  }
+
+  .workContainer.dark h4{
+    color: #ffffff;
   }
 
   .workContainer h3{
@@ -259,12 +446,20 @@
 
     width: 100%;
 
-    margin-top: 20px;
+    margin-top: 35px;
   }
 
   .workItemContainer h2{
-    font-size: 35px;
+    font-size: 40px;
     font-weight: 500;
+  }
+
+  .workItemContainer.light h2{
+    color: #65656a;
+  }
+
+  .workItemContainer.dark h2{
+    color: #ffffff;
   }
 
   .workItem{
@@ -276,15 +471,22 @@
 
   .workItem p{
     font-size: 18px;
-    color: #ceced3;
     margin-block-end: 0;
     margin-block-start: 0;
     text-align: right;
   }
 
+  .workItem.light p{
+    color: #65656a;
+  }
+
+  .workItem.dark p{
+    color: #ceced3;
+  }
+
   .workItem span{
     margin-top: 5px;
-    font-size: 12px;
+    font-size: 15px;
     color: #65656a;
   }
 
@@ -363,7 +565,7 @@
     display: flex;
     align-items: center;
 
-    margin: 20px 0;
+    margin: 40px 0;
   }
 
   .projectDescription{
@@ -373,6 +575,22 @@
   .projectDescription p{
     font-size: 25px;
     font-weight: bold;
+  }
+
+  .projectDescription.light p{
+    color: #000000;
+  }
+
+  .projectDescription.dark p{
+    color: unset;
+  }
+
+  .projectDescription.light svg path{
+    color: #000000;
+  }
+
+  .projectDescription.dark svg path{
+    color: unset;
   }
 
   .projectDescription svg{
@@ -396,7 +614,6 @@
   .techList p{
     font-size: 12px;
     padding: 5px 10px;
-    background-color: #33333b;
 
     margin-block-end: 0;
     margin-block-start: 0;
@@ -404,12 +621,25 @@
     border-radius: 20px;
 
     opacity: 1;
+  }
+
+  .techList.light p{
+    background-color: #e4e8ee;
+    color: #65656a;
+  }
+
+  .techList.dark p{
+    background-color: #33333b;
     color: #8b8a8d;
   }
 
   @media (max-width: 768px) {
     .layout {
       padding: 0;
+    }
+
+    .projectDescription{
+      margin: 20px 0;
     }
 
     .projectDescription p{
@@ -423,6 +653,18 @@
     .profileTitle h2{
       font-size: 33px;
       margin-left: 19px;
+    }
+
+    .projectContainer{
+      padding: 16px;
+    }
+
+    .workContainer{
+      padding: 16px;
+    }
+
+    .profileContainer{
+      padding: 16px;
     }
   }
   

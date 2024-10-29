@@ -2,7 +2,7 @@ import Head from 'next/head';
 import AnimatedGrid from '../components/AnimatedGrid/AnimatedGrid';
 import 'react-grid-layout/css/styles.css';
 import 'react-resizable/css/styles.css';
-import App from '@/components/GridContent/GridContent';
+
 
 export default function Home() {
   return (

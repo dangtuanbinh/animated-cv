@@ -2,13 +2,17 @@
   .heroSection {
     position: relative;
     display: flex;
-    /* align-items: center;
-    justify-content: center; */
     height: 100vh;
-    /* text-align: center; */
-    background-color: #111;
     overflow: auto;
     width: 100%;
+  }
+
+  .heroSection.light{
+    background-color: #ffffff;
+  }
+
+  .heroSection.dark{
+    background-color: #111;
   }
   
   .content {
@@ -25,30 +29,18 @@
     height: 100%;
     z-index: 0;
     overflow: hidden;
+  }
+
+  .svgContainer.light{
+    background-color: #ffffff;
+    opacity: 0.3;
+  }
+
+  .svgContainer.dark{
     background-color: #000000;
-    opacity: 0.4;
+    opacity: 0.3;
   }
   
-  section#more {
-    padding: 5rem 2rem;
-    background-color: #f4f4f4;
-    color: #333;
-    text-align: center;
-  }
-  
-  section#more .info {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  section#more h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  section#more p {
-    font-size: 1.25rem;
-    line-height: 1.6;
-  }
+
 
   

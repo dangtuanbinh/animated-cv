@@ -1,17 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './AnimatedGrid.module.css';
 import App from '../GridContent/GridContent';
 
 const AnimatedGrid = () => {
+  const [currentTheme, setCurrentTheme] = useState('dark');
+
+  const toggleTheme = (theme) => {
+    setCurrentTheme(theme);
+  };
+
+
   return (
-    <header className={styles.heroSection}>
+    <header className={`${styles.heroSection} ${styles[currentTheme]}`}>
       <div className={styles.content}>
-        <App />
+        <App currentTheme={currentTheme} toggleTheme={toggleTheme}/>
       </div>
-      <div className={styles.svgContainer}>
+      <div className={`${styles.svgContainer} ${styles[currentTheme]}`}>
         <svg className={styles.absolute} width="100%" height="100%">
           <defs>
-            <pattern id="grid" x="0" y="0" width="70" height="70" patternUnits="userSpaceOnUse" fill="var(--background)" opacity="0.1">
+            <pattern id="grid" x="0" y="0" width="70" height="70" patternUnits="userSpaceOnUse" fill={`${currentTheme === 'dark' ? `var(--background)` : `#ffffff`}`} opacity="0.1">
               <path d="M 70 0 L 0 0 0 70" stroke="var(--grid-line-color)" strokeWidth="3"></path>
             </pattern>
             <radialGradient id="lightGradient">
