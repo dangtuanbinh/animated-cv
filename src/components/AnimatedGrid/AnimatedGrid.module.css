@@ -20,6 +20,10 @@
     z-index: 1;
     width: 100%;
   }
+
+  .content.react-grid-layout.react-grid-item.react-grid-placeholder{
+    background-color: blue !important;
+  }
   
   .svgContainer {
     position: absolute;

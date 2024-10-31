@@ -19,7 +19,7 @@
 
   .layout {
     width: 100%;
-    padding: 0 3rem;
+    /* padding: 0 3rem; */
   }
 
   .buttonWrapper{
@@ -638,6 +638,10 @@
       padding: 0;
     }
 
+    .buttonWrapper button{
+      padding: 5px 29px;
+    }
+
     .projectDescription{
       margin: 20px 0;
     }
@@ -650,8 +654,8 @@
       font-size: 25px;
     }
 
-    .profileTitle h2{
-      font-size: 33px;
+    .profileTitle span{
+      font-size: 28px;
       margin-left: 19px;
     }
 

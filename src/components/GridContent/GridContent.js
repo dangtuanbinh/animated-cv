@@ -79,11 +79,26 @@ const App = ({currentTheme, toggleTheme}) => {
   
   const [currentLayout, setCurrentLayout] = useState(layouts.layout1);
   const [currentLayoutName, setCurrentLayoutName] = useState('layout1');
+  const [isDragging, setIsDragging] = useState(false);
 
   // Handler for layout change buttons
   const changeLayout = (layout, layoutName) => {
     setCurrentLayout(layout);
     setCurrentLayoutName(layoutName);
+  };
+
+  const handleMouseDown = (e) => {
+    // Prevent default to avoid moving on click
+    e.preventDefault();
+    setIsDragging(false);
+  };
+
+  const onDragStart = (e) => {
+    setIsDragging(true); // Set dragging to true on drag start
+  };
+
+  const onDragStop = () => {
+    setIsDragging(false); // Reset dragging when the drag stops
   };
 
   return (
@@ -101,15 +116,14 @@ const App = ({currentTheme, toggleTheme}) => {
         cols={{ lg: 10, md: 6, sm: 4, xs: 2, xxs: 1 }}
         rowHeight={60}
         width={1200}
-        draggableHandle=".drag-handle"
-        isResizable={false}
-        isDraggable={true}
         responsive={true}
         margin={[20,20]}
+        containerPadding={[20,0]}
+        onDragStop={onDragStop}
+        isDraggable= {isDragging ? true :false}
       >
-        {/* Render grid items dynamically */}
         {currentLayout.map(item => (
-          <div key={item.i} data-grid={item} className={`${styles.card} drag-handle ${styles[currentTheme]}`}>
+          <div key={item.i} data-grid={item} className={`${styles.card} ${styles[currentTheme]} ${isDragging ? styles.dragging : ''}`} onMouseDown={handleMouseDown} onDragStart={onDragStart}>
             {item.i === 'profile' && (
               <div className={`${styles.profileContainer} ${styles[currentTheme]}`}>
                 <div className={`${styles.profileTitle} ${styles[currentTheme]}`}>
@@ -130,7 +144,7 @@ const App = ({currentTheme, toggleTheme}) => {
                         wrapper="span"
                         cursor={true}
                         repeat={Infinity}
-                        style={{ fontSize: '2em', display: 'inline-block' }}
+                        style={{ display: 'inline-block' }}
                     />
                 </div>
                 
@@ -145,11 +159,11 @@ const App = ({currentTheme, toggleTheme}) => {
                 </div>
 
                 <div className={`${styles.cvButton} ${styles[currentTheme]}`}>
-                    <a href="/myCV.pdf" download="myCV.pdf" >
+                    <a href="/Frontend-Developer-Dang-Tuan-Binh.pdf" download="Frontend-Developer-Dang-Tuan-Binh.pdf" >
                         <MdOutlineCloudDownload />
                     </a>
 
-                    <a href="/myCV.pdf" target="_blank" rel="noopener noreferrer">
+                    <a href="/Frontend-Developer-Dang-Tuan-Binh.pdf" target="_blank" rel="noopener noreferrer">
                         <HiMiniViewfinderCircle />
                     </a>
                 </div>
@@ -354,7 +368,7 @@ const App = ({currentTheme, toggleTheme}) => {
               <div className={styles.projectContainer}>
                 <div className={styles.project2Image}></div>
                 <span>Cremind AI</span>
-                <a href='https://www.template.net/' className={`${styles.projectDescription} ${styles[currentTheme]}`} target='_blank'>
+                <a href='https://cremind.io/' className={`${styles.projectDescription} ${styles[currentTheme]}`} target='_blank'>
                     <p>AI Chatbot Intergration Platform</p>
                     <BsSend />
                 </a>   
@@ -371,7 +385,7 @@ const App = ({currentTheme, toggleTheme}) => {
               <div className={styles.projectContainer}>
                 <div className={styles.project3Image}></div>
                 <span>Gixpert</span>
-                <a href='https://www.template.net/' className={`${styles.projectDescription} ${styles[currentTheme]}`} target='_blank'>
+                <a href='https://gixpert.com/' className={`${styles.projectDescription} ${styles[currentTheme]}`} target='_blank'>
                     <p>Human Resource Platform</p>
                     <BsSend />
                 </a>   
@@ -388,8 +402,8 @@ const App = ({currentTheme, toggleTheme}) => {
             {item.i === 'project4' && (
               <div className={styles.projectContainer}>
                 <div className={styles.project4Image}></div>
-                <span>Korcha Mall</span>
-                <a href='https://www.template.net/' className={`${styles.projectDescription} ${styles[currentTheme]}`} target='_blank'>
+                <span>Kocha Mall</span>
+                <a href='https://kochamall.co.kr/' className={`${styles.projectDescription} ${styles[currentTheme]}`} target='_blank'>
                     <p>Ecommerce Platform</p>
                     <BsSend />
                 </a>   
